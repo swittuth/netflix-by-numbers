@@ -1,0 +1,22 @@
+{
+  "name": "netflix-by-numbers",
+  "version": "1.0.0",
+  "description": "Data visualization for Netflix",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build"
+  },
+  "author": "swittuth",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^7.6.1",
+    "node-fetch": "^3.2.10",
+    "parcel": "^2.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
