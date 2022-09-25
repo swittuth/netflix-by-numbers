@@ -1,5 +1,6 @@
 import { data } from "../../data/data.js";
 import * as d3 from "d3";
+import moment from "moment";
 
 // latest and earliest added for movies and tv shows
 const latestTime = d3.rollup(
@@ -18,7 +19,12 @@ for (let d of data) {
     if (c.length > 0) countries.add(c.trim());
   }
 }
-console.log(countries.size);
 
-// tv shows / movies added by the year 
-const showsByYear = 
+// tv shows / movies added by the year
+// check if there's a correlation between the stock price and the number of shows added
+// can be misleading because there are missing data in 2021 -> hasn't been collected yet -> doesn't represent well
+const showsAddedByYear = d3.rollup(
+  data,
+  (group) => group.length,
+  (data) => moment(data.date_added).format("YYYY")
+);
