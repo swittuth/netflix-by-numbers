@@ -4,7 +4,7 @@
   "description": "Data visualization for Netflix",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "parcel --port 3000 src/index.html",
     "build": "parcel build"
   },
   "author": "swittuth",
